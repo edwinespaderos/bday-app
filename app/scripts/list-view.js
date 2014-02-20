@@ -9,12 +9,15 @@ var ListView = Backbone.View.extend({
 
   events: {
 
-    "click": "jumboView"
+    "click"       : "jumboView",
+    "click .down" : "expand",
+    "click .new"  : "newAdd"
   },
 
   initialize: function(){
-    $('.js-contact-list').prepend( this.el );
     
+    $('.js-contact-list').prepend( this.el );
+    this.listenTo( this.model, 'change', this.render)
     this.render();    
 
   },
@@ -26,6 +29,14 @@ var ListView = Backbone.View.extend({
 
   jumboView: function(){
     new MainView({model: this.model})
+  },
+
+  expand: function(){
+    this.$el.find('.info-bio').slideToggle( "fast" )
+  },
+
+  newAdd: function(){
+    new AddView({model: this.model})
   }
 
 });

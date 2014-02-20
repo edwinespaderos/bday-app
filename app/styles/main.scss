@@ -1,5 +1,6 @@
 $icon-font-path: "/bower_components/sass-bootstrap/fonts/";
 
+@import "compass/css3/border-radius";
 @import 'sass-bootstrap/lib/bootstrap';
 
 .browsehappy {
@@ -28,7 +29,20 @@ body {
     background: #5bc0de;
     border-width: 0 0 0 1px;
     box-shadow: 0 3px 8px rgba(0, 0, 0, 0.19);
+    padding: 15px;
 
+}
+
+.list-input {
+      width: 100%;
+      display: inline-block;
+      padding: 7px 10px;
+      font-size: 19px;
+      color: #555;
+      border: 1px solid #eee;
+      border-radius: 5px;
+      margin-bottom: 20px;
+      @include border-radius(4px);
 }
 
 .list-wraper {
@@ -59,6 +73,10 @@ body {
         margin: 2px;
         font-size: 15px;
         color: #585858;
+        width: 250px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
       }
 
       .sidebar {
@@ -85,9 +103,14 @@ body {
         .btns-tools {
           letter-spacing: 5px;
           margin-bottom: 2px;
+          .glyph-btn{
+
+            &:hover {
+                color: #d9534f;
+            }  
+          }
         }
       }
-
 }
 
 /* Custom page footer */

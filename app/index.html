@@ -25,60 +25,61 @@
         <!--[if lt IE 10]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">Add New List Item</h4>
+              </div>
+              <div class="modal-body">
+                <input class="list-input" type="text" placeholder="name">
+                <input class="list-input" type="text" placeholder="email">
+                <input class="list-input" type="text" placeholder="bio">
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+              </div>
+            </div><!-- /.modal-content -->
+          </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
 
         <div class="container">
            <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
              <div class="container">
-            
+              <ul class="nav nav-pills pull-right new">
+                    <li><a href="#" data-toggle="modal" data-target="#myModal">New</a></li>
+              </ul>
              </div>
            </nav>
 
 
             <div class="row marketing">
                 <div class="col-lg-12  js-contact-list"> 
-                 <!--  <div class="list-wraper">
-                    <div class="image-wraper">
-                    <img src="http://31.media.tumblr.com/tumblr_maygol6xsX1rhujd6o7_1280.jpg"> 
-                    </div>
-                    <div class="info-wraper">
-                      <p class="info name">name: john paul jones</p>
-                      <p class="info email">email@email.com</p>
-                      <p class="info bio">bio: The best bass player..</p>
-                    </div>
-                    <div class="sidebar pull-right">
-                       <span class="glyphicon glyphicon-chevron-down down"></span>
-                    </div>
-                    <div style="display:none;" class="info-bio">
-                      <p>John Baldwin (born 3 January 1946), known by the stage name John Paul Jones, is an English multi-instrumentalist, songwriter, composer, arranger and record producer. Best known as the bassist, keyboardist, and co-songwriter for English rock band Led Zeppelin, Jones has since developed a solo career. A versatile musician, Jones also plays organ, guitar, koto, lap steel guitars, mandolin, autoharp, violin, ukulele, sitar, cello, continuum and the three over-dubbed recorder parts heard on Led Zeppelin's "Stairway to Heaven".</p>
-                      <div class="btns-tools pull-right">
-                        <span class="glyphicon glyphicon-pencil"></span>
-                        <span class="glyphicon glyphicon-remove"></span>
-                        </div>
-                    </div>
-                  </div> -->
+                 
                 </div>
             </div>
 
             <div class="footer">
-                <p>♥ from the Yeoman team</p>
+                <p>♥ Is This a JavaScript?</p>
             </div>
 
         </div>
 
-        <script type="text/template" id="jumbo-item-template">
+        <script type="text/template" id="add-item-template">
         </script>
 
         <script type="text/template" id="list-item-template">
               
                <div class="list-wraper">
                     <div class="image-wraper">
-                    <img src="http://31.media.tumblr.com/tumblr_maygol6xsX1rhujd6o7_1280.jpg"> 
+                    <img src= <%= avatar %> > 
                     </div>
                     <div class="info-wraper">
-                      <p class="info name">name: john paul jones</p>
-                      <p class="info email">email@email.com</p>
-                      <p class="info bio">bio: The best bass player..</p>
+                      <p class="info name">name: <%=name%> </p>
+                      <p class="info email">email: <%=email%> </p>
+                      <p class="info bio">bio: <%=bio%> </p>
                     </div>
                     <div class="sidebar pull-right">
                        <span class="glyphicon glyphicon-chevron-down down"></span>
@@ -86,8 +87,8 @@
                     <div style="display:none;" class="info-bio">
                       <p> <%=bio%> </p>
                       <div class="btns-tools pull-right">
-                        <span class="glyphicon glyphicon-pencil"></span>
-                        <span class="glyphicon glyphicon-remove"></span>
+                        <span class="glyphicon glyphicon-pencil glyph-btn"></span>
+                        <span class="glyphicon glyphicon-remove glyph-btn"></span>
                         </div>
                     </div>
                   </div>

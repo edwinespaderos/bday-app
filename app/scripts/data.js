@@ -1,7 +1,7 @@
 var data = [
   {
     name: "John Paul Jones",
-    bio: "tohn Baldwin (born 3 January 1946), known by the stage name John Paul Jones, is an English multi-instrumentalist, songwriter, composer, arranger and record producer. Best known as the bassist, keyboardist, and co-songwriter for English rock band Led Zeppelin, Jones has since developed a solo career. A versatile musician, Jones also plays organ, guitar, koto, lap steel guitars, mandolin, autoharp, violin, ukulele, sitar, cello, continuum and the three over-dubbed recorder parts heard on Led Zeppelin's Stairway to Heaven",
+    bio: "John Baldwin (born 3 January 1946), known by the stage name John Paul Jones, is an English multi-instrumentalist, songwriter, composer, arranger and record producer. Best known as the bassist, keyboardist, and co-songwriter for English rock band Led Zeppelin, Jones has since developed a solo career. A versatile musician, Jones also plays organ, guitar, koto, lap steel guitars, mandolin, autoharp, violin, ukulele, sitar, cello, continuum and the three over-dubbed recorder parts heard on Led Zeppelin's Stairway to Heaven",
     email: 'jpjones@ledzeppelin.com',
     avatar: 'http://31.media.tumblr.com/tumblr_maygol6xsX1rhujd6o7_1280.jpg'
   },
